@@ -37,5 +37,14 @@
     <footer>
         <p>&copy; 2024 Deviltech Innovations. All rights reserved.</p>
     </footer>
+
+    <script>
+    const form = document.querySelector('form');
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        document.getElementById('confirmation').style.display = 'block';
+        form.reset();
+    });
+    </script>
 </body>
 </html>
