@@ -3,22 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Contact Us</title>
 </head>
 <body>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="services.html">Our Services</a>
-        <a href="contact.html">Contact Us</a>
-    </nav>
-
     <h1>Contact Us</h1>
-    <p>If you have any questions or inquiries, feel free to reach out using the form below:</p>
-
     <form id="contact-form">
-    
         <label for="name">Name:</label><br>
         <input type="text" id="name" name="name" required><br><br>
 
@@ -32,15 +21,12 @@
     </form>
 
     <div id="confirmation" style="display:none; color: green;">Message sent successfully!</div>
+    <div id="error" style="display:none; color: red;">Something went wrong. Please try again later.</div>
 
-    <footer>
-        <p>&copy; 2024 Deviltech Innovations. All rights reserved.</p>
-    </footer>
-    
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script>
         (function () {
-            emailjs.init("deviltech.innovations@outlook.com"); // Replace with your EmailJS user ID
+            emailjs.init("YOUR_USER_ID"); // Replace with your EmailJS User ID
         })();
 
         const form = document.getElementById("contact-form");
@@ -50,8 +36,11 @@
             emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this)
                 .then(() => {
                     document.getElementById("confirmation").style.display = "block";
+                    document.getElementById("error").style.display = "none";
                     form.reset();
                 }, (error) => {
+                    document.getElementById("error").style.display = "block";
+                    document.getElementById("confirmation").style.display = "none";
                     console.error("Failed to send message:", error);
                 });
         });
