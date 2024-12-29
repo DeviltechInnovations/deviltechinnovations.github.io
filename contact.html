@@ -30,21 +30,8 @@
         <button type="submit">Send Message</button>
     </form>
 
-    <div id="confirmation" style="display: none; color: green; margin-top: 20px;">
-    Your message has been successfully sent!
-    </div>
-
     <footer>
         <p>&copy; 2024 Deviltech Innovations. All rights reserved.</p>
     </footer>
-
-    <script>
-    const form = document.querySelector('form');
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        document.getElementById('confirmation').style.display = 'block';
-        form.reset();
-    });
-    </script>
 </body>
 </html>
