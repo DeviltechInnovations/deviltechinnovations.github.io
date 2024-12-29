@@ -8,17 +8,30 @@
 </head>
 <body>
     <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About Us</a>
-    <a href="services.html">Our Services</a>
-    <a href="contact.html">Contact Us</a>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Our Services</a>
+        <a href="contact.html">Contact Us</a>
     </nav>
+
     <h1>Contact Us</h1>
-    <p>Email: <a href="mailto:deviltech.innovations@outlook.com">deviltech.innovations@outlook.com</a></p>
-    <p>Address: Your future business address here</p>
-    <a href="index.html">Go Back to Home</a>
+    <p>If you have any questions or inquiries, feel free to reach out using the form below:</p>
+
+    <form action="https://formsubmit.co/deviltech.innovations@outlook.com" method="POST">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="5" required></textarea><br><br>
+
+        <button type="submit">Send Message</button>
+    </form>
+
+    <footer>
+        <p>&copy; 2024 Deviltech Innovations. All rights reserved.</p>
+    </footer>
 </body>
-<footer>
-    <p>&copy; 2024 Deviltech Innovations. All rights reserved.</p>
-</footer>
 </html>
