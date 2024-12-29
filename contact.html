@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Contact Us</title>
 </head>
 <body>
@@ -35,12 +36,9 @@
 
             emailjs.sendForm("deviltech.innovations", "template_qu62lxj", this)
                 .then(() => {
-                    document.getElementById("confirmation").style.display = "block";
-                    document.getElementById("error").style.display = "none";
-                    form.reset();
+                    window.location.href = "thankyou.html"; // Redirect to Thank You page
                 }, (error) => {
                     document.getElementById("error").style.display = "block";
-                    document.getElementById("confirmation").style.display = "none";
                     console.error("Failed to send message:", error);
                 });
         });
