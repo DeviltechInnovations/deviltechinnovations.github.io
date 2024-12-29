@@ -26,14 +26,14 @@
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script>
         (function () {
-            emailjs.init("YOUR_USER_ID"); // Replace with your EmailJS User ID
+            emailjs.init("E2lXXh-2GbIEn3ppE"); // Replace with your EmailJS User ID
         })();
 
         const form = document.getElementById("contact-form");
         form.addEventListener("submit", function (event) {
             event.preventDefault();
 
-            emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this)
+            emailjs.sendForm("deviltech.innovations", "template_qu62lxj", this)
                 .then(() => {
                     document.getElementById("confirmation").style.display = "block";
                     document.getElementById("error").style.display = "none";
